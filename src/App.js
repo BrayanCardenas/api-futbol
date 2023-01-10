@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import Form from "./components/form/Form";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [team, setTeam] = useState("");
+  const [container, setContainer] = useState([]);
+
+  const onCHangeHandlerteam = (e) => setTeam(e.target.value);
+  const submitHandler = (e) => e.preventDefault();
+
+  useEffect(() => {
+    const API = `https://api-football-v1.p.rapidapi.com/v3/teams?search=${team}`;
+    const options = {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Key": "ae596b38aemsh4b2c2ef54100239p1773abjsn5e63418aaf4e",
+        "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com",
+      },
+    };
+    fetch(API, options)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => setContainer(data.response))
+      .catch((err) => console.error(err));
+  }, [team]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Form
+        team={team}
+        onCHangeHandlerteam={onCHangeHandlerteam}
+        submitHandler={submitHandler}
+        container={container}
+      />
+    </>
   );
 }
 

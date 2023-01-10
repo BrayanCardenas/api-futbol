@@ -1,0 +1,41 @@
+.container {
+  padding: 1em;
+}
+.table {
+  text-align: left;
+  width: 100%;
+}
+.table th {
+  font-size: 0.9375em;
+  color: #00ad5f;
+  line-height: 1.4;
+  text-transform: uppercase;
+  background-color: #393939;
+  padding: 1.125em 0;
+}
+
+.td {
+  min-width: 6em;
+  max-width: 6em;
+  font-size: 1em;
+  color: gray;
+  line-height: 1.4;
+  background-color: #222;
+  text-align: start;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  vertical-align: middle;
+}
+.img {
+  width: 6.3em;
+}
+
+.section {
+  text-align: center;
+}
+.line {
+  border-right: 1px solid #121212;
+}
+input {
+  background: #393939;
+}
