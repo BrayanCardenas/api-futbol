@@ -1,4 +1,5 @@
 import Form from "./components/form/Form";
+import Tabla from "./components/tabla/Tabla";
 import { useState, useEffect } from "react";
 import "./App.scss";
 
@@ -28,12 +29,14 @@ function App() {
 
   return (
     <>
+      <h1>Encuentra a tu equipo</h1>
       <Form
         team={team}
         onCHangeHandlerteam={onCHangeHandlerteam}
         submitHandler={submitHandler}
         container={container}
       />
+      <Tabla container={container} />
     </>
   );
 }

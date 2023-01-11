@@ -1,3 +1,12 @@
-input {
-  background: #393939;
+.Form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin: 1em;
+  &-input{
+    width: 30em;
+    background: #393939;
+    height: 2em;
+  }
 }
