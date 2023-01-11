@@ -1,7 +1,10 @@
 .Container {
   border-radius: 1em;
   overflow: hidden;
-  overflow-x: scroll;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
 }
 .Table {
   width: 100%;
@@ -23,11 +26,17 @@
     padding-left: 1.5em;
   }
   &-th{
-    color: #00ad5f;
+    color: var(--verde);
     text-transform: uppercase;
     background-color: #393939;
   }
   &-img {
     width: 6.3em;
+  }
+}
+
+@media only screen and (max-width: 1035px) {
+  .Container {
+    overflow-x: scroll;
   }
 }

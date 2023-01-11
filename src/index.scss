@@ -13,7 +13,7 @@
 :root {
   --negro: #121212;
   --blanco: #ececec;
-  --azul: #00fff0;
+  --verde: #00ad5f;
 
   /* Tipografía */
   --tipo-principal: 'Karla', sans-serif;
@@ -27,7 +27,7 @@
   :root {
     --negro: #ececec;
     --blanco: #121212;
-    --azul: #00fff0;
+    --verde: #00ad5f;
   }
 } */
 
@@ -180,4 +180,16 @@ body {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
+}
+body::-webkit-scrollbar {
+  width: .5em;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--verde);
+  /*colorofthescrollthumb*/border-radius: .01em;
 }
