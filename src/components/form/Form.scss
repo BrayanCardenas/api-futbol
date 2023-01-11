@@ -1,12 +1,23 @@
-.Form{
+.Form {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1em;
   margin: 1em;
-  &-input{
+  &-input {
     width: 30em;
-    background: #393939;
     height: 2em;
+    border-radius: 0.5em;
+    background: #393939;
+  }
+  &-btn {
+    width: 5em;
+    height: 2em;
+    border-radius: 0.5em;
+    background: #00ad5f;
+  }
+  &-btn:hover{
+    background: #008549;
+    cursor: pointer;
   }
 }

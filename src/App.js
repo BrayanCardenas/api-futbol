@@ -8,7 +8,7 @@ function App() {
   const [container, setContainer] = useState([]);
 
   const onCHangeHandlerteam = (e) => setTeam(e.target.value);
-  const submitHandler = (e) => e.preventDefault();
+  const submitHandler = (e) => {e.preventDefault()};
 
   useEffect(() => {
     const API = `https://api-football-v1.p.rapidapi.com/v3/teams?search=${team}`;
