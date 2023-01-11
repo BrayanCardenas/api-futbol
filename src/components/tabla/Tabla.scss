@@ -1,41 +1,35 @@
-.container {
-  padding: 1em;
+.Container {
+  border-radius: 1em;
+  overflow: hidden;
 }
-.table {
-  text-align: left;
+.Table {
   width: 100%;
-}
-.table th {
-  font-size: 0.9375em;
-  color: #00ad5f;
-  line-height: 1.4;
-  text-transform: uppercase;
-  background-color: #393939;
-  padding: 1.125em 0;
-}
-
-.td {
-  min-width: 6em;
-  max-width: 6em;
+  text-align: left;
   font-size: 1em;
-  color: gray;
-  line-height: 1.4;
-  background-color: #222;
-  text-align: start;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  vertical-align: middle;
-}
-.img {
-  width: 6.3em;
-}
-
-.section {
-  text-align: center;
-}
-.line {
-  border-right: 1px solid #121212;
-}
-input {
-  background: #393939;
+    
+  &-td {
+    min-width: 6em;
+    max-width: 6em;
+    color: gray;
+    background-color: #222;
+    padding: 1em 0;
+    vertical-align: middle;
+  }
+  &-td--section {
+    text-align: center;
+  }
+  &-td--line {
+    border-right: 1px solid #121212;
+  }
+  &-td--left {
+    padding-left: 1.5em;
+  }
+  &-th{
+    color: #00ad5f;
+    text-transform: uppercase;
+    background-color: #393939;
+  }
+  &-img {
+    width: 6.3em;
+  }
 }

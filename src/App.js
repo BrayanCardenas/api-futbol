@@ -1,6 +1,6 @@
-import "./App.scss";
 import Form from "./components/form/Form";
 import { useState, useEffect } from "react";
+import "./App.scss";
 
 function App() {
   const [team, setTeam] = useState("");

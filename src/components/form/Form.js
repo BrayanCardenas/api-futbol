@@ -1,5 +1,6 @@
-import Tabla from "../tabla/Tabal";
+import Tabla from "../tabla/Tabla";
 import "./Form.scss";
+
 function Form({ onCHangeHandlerteam, submitHandler, team, container }) {
   return (
     <>
